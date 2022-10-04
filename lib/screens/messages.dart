@@ -55,12 +55,12 @@ class _MessagesScreenState extends State<MessagesScreen> {
     return ListView.builder(
       itemCount: _dataList.length,
       itemBuilder: (e, index) {
-        final user = _dataList[index]["users"][0];
+        final String user = _dataList[index]["users"][0];
         return ChatUserCard(
-          image: _dataList[index][user]["image"],
-          desc: _dataList[index][user]["about"],
+          uid: user,
           name: _dataList[index][user]["name"],
-          uid: _dataList[index][user]["user"],
+          desc: _dataList[index][user]["about"],
+          image: _dataList[index][user]["image"],
         );
       },
     );
