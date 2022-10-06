@@ -26,11 +26,13 @@ class _MainPageState extends State<MainPage> {
     const ProfileScreen(),
   ];
 
+  final List _pageName = ["Home", "Messages", "Profile"];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Chat App"),
+        title: Text(_pageName[_selectedIndex]),
       ),
       floatingActionButton: Container(
         padding: const EdgeInsets.all(10),
